@@ -41,17 +41,13 @@ ds_cli_exec( "wp plugin activate wpsitesync" );
 /** Install & Activate Plugin located on the Computer - Use Path based on DS-CLI */
 /* Mac example */
 //ds_cli_exec( "cp /Volumes/Data/Dropbox/WP_Pithy/2.\ BBeaver\ Stuff/1.\ Beaver\ Builder\ Master\ zips/bb-plugin-agency.zip ./; wp plugin install bb-plugin-agency.zip --activate; rm bb-plugin-agency.zip" );
-/* Windows example */
-//ds_cli_exec( "copy c:\My_Premium_Plugins\bb-plugin-agency.zip ./; wp plugin install bb-plugin-agency.zip --activate; rm bb-plugin-agency.zip" );
 
 //** Install Theme and Activate - Use Path based on DS-CLI
 /* Mac example */
 //ds_cli_exec( "cp /Volumes/Data/Dropbox/WP_Pithy/2.\ BBeaver\ Stuff/1.\ Beaver\ Builder\ Master\ zips/bb-theme.zip ./; wp theme install bb-theme.zip; rm bb-theme.zip" );
-/* Windows example */
-//ds_cli_exec( "copy c:\My_Premium_Themes\bb-theme.zip ./; wp theme install bb-theme.zip; rm bb-theme.zip" );
 
 //** Create child theme
-ds_cli_exec( "wp scaffold child-theme bb-child --parent_theme=bb-theme --activate" );
+//ds_cli_exec( "wp scaffold child-theme bb-child --parent_theme=bb-theme --activate" );
 
 //** Remove Default Themes (Except twentyseventeen)
 ds_cli_exec( "wp theme delete twentyfifteen" );
