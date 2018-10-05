@@ -4,7 +4,7 @@
  */
 
 /** Download the latest version of WordPress*/
-ds_cli_exec( "wp core download" );
+ds_cli_exec( "wp core download --locale=de_DE" );
 
 //** Install WordPress
 ds_cli_exec( "wp core install --url=$siteName --title='Dynamic Blueprint' --admin_user=testadmin --admin_password=password --admin_email=pleaseupdate@$siteName" );
