@@ -1,6 +1,6 @@
 <?php
 /**
- * Dynamic Blueprint
+ * personal Dynamic Blueprint
  */
 
 /** Download the latest version of WordPress*/
