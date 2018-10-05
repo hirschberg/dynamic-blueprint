@@ -19,8 +19,12 @@ ds_cli_exec( "wp rewrite structure '/%postname%' --quiet" );
 ds_cli_exec( "wp option update blog_public 'on'" );
 
 /** Download plugin from repository, unzip Image Widget, activate */
-ds_cli_exec( "wp plugin install image-widget" );
-ds_cli_exec( "wp plugin activate image-widget" );
+ds_cli_exec( "wp plugin install contact-form-7" );
+ds_cli_exec( "wp plugin activate contact-form-7" );
+ds_cli_exec( "wp plugin install duplicate-post" );
+ds_cli_exec( "wp plugin activate duplicate-post" );
+ds_cli_exec( "wp plugin install wp-retina-2x" );
+ds_cli_exec( "wp plugin activate wp-retina-2x" );
 
 //** Download & Activate Theme from Git
 ds_cli_exec( "git clone https://github.com/Fruitfulcode/Fruitful.git wp-content/themes/fruitful/");
@@ -96,37 +100,37 @@ ds_cli_exec( "git init");
  *  https://github.com/settings/keys  add your SSH key on this page with a note to help you remember.
  *  */
 
-//** Change to your github user and token
-$git_user = "user";
-$git_token = "token";
-
-//** Set default user and token from github
-ds_cli_exec( "git config --global github.user $git_user" );
-ds_cli_exec( "git config --global github.token $git_token" );
-
-//** Create Github Repo 
-ds_cli_exec( "curl -u $git_user:$git_token https://api.github.com/user/repos -d '{ \"name\": \"$siteName\" }'" );
-
-//** Add remote origin to git
-ds_cli_exec( "git remote add origin git@github.com:$git_user/$siteName.git" );
-
-//** Add files to local Repo
-ds_cli_exec( "git add wp-content");
-
-//** Do inital Commit
-ds_cli_exec( "git commit -m 'Intial Commit'");
-
-//** Send Commit to Github
-ds_cli_exec( "git push -u origin master" );
-
-//** Create a directory & get image from Github based on DS-CLI
-//	ds_cli_exec( "mkdir ./media" );
-//	ds_cli_exec( "wget https://jawordpressorg.github.io/wapuu/wapuu-original/wapuu-original.svg -O ./media/wapuu.svg" );
+// //** Change to your github user and token
+// $git_user = "user";
+// $git_token = "token";
+//
+// //** Set default user and token from github
+// ds_cli_exec( "git config --global github.user $git_user" );
+// ds_cli_exec( "git config --global github.token $git_token" );
+//
+// //** Create Github Repo
+// ds_cli_exec( "curl -u $git_user:$git_token https://api.github.com/user/repos -d '{ \"name\": \"$siteName\" }'" );
+//
+// //** Add remote origin to git
+// ds_cli_exec( "git remote add origin git@github.com:$git_user/$siteName.git" );
+//
+// //** Add files to local Repo
+// ds_cli_exec( "git add wp-content");
+//
+// //** Do inital Commit
+// ds_cli_exec( "git commit -m 'Intial Commit'");
+//
+// //** Send Commit to Github
+// ds_cli_exec( "git push -u origin master" );
+//
+// //** Create a directory & get image from Github based on DS-CLI
+// //	ds_cli_exec( "mkdir ./media" );
+// //	ds_cli_exec( "wget https://jawordpressorg.github.io/wapuu/wapuu-original/wapuu-original.svg -O ./media/wapuu.svg" );
 
 //** Check if index.php unpacked okay
 if ( is_file( "index.php" ) ) {
 
 	//** Cleanup the empty folder, download, and this script.
-	ds_cli_exec( "rm blueprint.php" );	
+	ds_cli_exec( "rm blueprint.php" );
 	ds_cli_exec( "rm index.htm" );
 }
