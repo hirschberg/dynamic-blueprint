@@ -43,6 +43,7 @@ ds_cli_exec( "wp plugin activate wpsitesync" );
 ds_cli_exec( "cp /Volumes/xx_sonstiges/xx_programmierung/02_wordpress/01_plugins/ACF-Pro/advanced-custom-fields-pro.zip ./; wp plugin install advanced-custom-fields-pro.zip --activate; rm advanced-custom-fields-pro.zip" );
 
 //** Install Theme and Activate - Use Path based on DS-CLI
+
 /* Mac example */
 //ds_cli_exec( "cp /Volumes/Data/Dropbox/WP_Pithy/2.\ BBeaver\ Stuff/1.\ Beaver\ Builder\ Master\ zips/bb-theme.zip ./; wp theme install bb-theme.zip; rm bb-theme.zip" );
 
